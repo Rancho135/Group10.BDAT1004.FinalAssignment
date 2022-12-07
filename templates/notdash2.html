@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<body style="font-family:arial, sans-serif">
+  <h1 style="background:lightblue;padding:10px">
+            DATA VISUALIZATION PROJECT ON CANADIAN WEATHER CONDITIONS
+    </h1>
+    <h6><a href="/">HOME</a></h6>
+    <h1>{{header1}}</h1>
+    <div>{{description1}}</div>
+    <div id="chart1" class="chart1"></div>
+   
+
+
+    <h1>{{header2}}</h1>
+    <div>{{description2}}</div>
+    <div id="chart2" class="chart2"></div>
+    
+
+    <h1>{{header3}}</h1>
+    <div>{{description3}}</div>
+    <div id="chart3" class="chart3"></div>
+
+    <h1>{{header4}}</h1>
+    <div>{{description4}}</div>
+    <div id="chart4" class="chart4"></div>
+    
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs1 = {{graphJSON1 | safe}};
+    Plotly.plot('chart1',graphs1,{});        
+</script>
+
+<script type="text/javascript">
+    var graphs2 = {{graphJSON2 | safe}};
+    Plotly.plot('chart2',graphs2,{});        
+</script>
+
+<script type="text/javascript">
+    var graphs3 = {{graphJSON3 | safe}};
+    Plotly.plot('chart3',graphs3,{});        
+</script>
+
+<script type="text/javascript">
+    var graphs4 = {{graphJSON4 | safe}};
+    Plotly.plot('chart4',graphs4,{});        
+</script>
+</html>
